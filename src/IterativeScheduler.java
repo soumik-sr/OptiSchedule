@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class IterativeScheduler {
 
+    //inserting a arr as input
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
         int n = startTime.length;
 
@@ -54,4 +55,6 @@ public class IterativeScheduler {
 
         return ans;
     }
+
+
 }
