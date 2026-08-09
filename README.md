@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Large organizations such as multinational corporations, consulting firms, hospitals, logistics companies, and technology companies handle thousands or even millions of scheduling requests.
 
@@ -53,7 +53,7 @@ time complexity.
 
 ---
 
-# 🏢 Real-World Business Scenario
+#  Real-World Business Scenario
 
 Imagine a multinational consulting company receives:
 
@@ -88,7 +88,7 @@ OptiSchedule provides the optimization engine responsible for this decision.
 
 ---
 
-# 🎯 Business Requirement
+#  Business Requirement
 
 The system must:
 
@@ -102,7 +102,7 @@ The system must:
 
 ---
 
-# 🧠 Core Optimization Problem
+#  Core Optimization Problem
 
 Each job is represented as:
 
@@ -145,7 +145,7 @@ This recurrence forms the basis of the Dynamic Programming solution.
 
 ---
 
-# 🏗️ System Architecture
+#  System Architecture
 
 ```text
                     ┌─────────────────────────┐
@@ -200,7 +200,7 @@ This recurrence forms the basis of the Dynamic Programming solution.
 
 ---
 
-# 🔍 System Design
+#  System Design
 
 ## 1. Input Layer
 
@@ -440,7 +440,7 @@ This changes an otherwise exponential recursive search into an efficient solutio
 
 ---
 
-# 🔄 Iterative Architecture
+#  Iterative Architecture
 
 The iterative implementation processes the DP states from right to left.
 
@@ -479,7 +479,7 @@ dp[0]
 
 ---
 
-# 🔄 Recursive Architecture
+#  Recursive Architecture
 
 The recursive implementation starts at the first job:
 
@@ -507,7 +507,7 @@ Therefore, each state is calculated only once.
 
 ---
 
-# ⚡ Iterative vs Recursive Design
+#  Iterative vs Recursive Design
 
 Both implementations use the same fundamental algorithm:
 
@@ -536,7 +536,7 @@ Their difference is how the DP states are evaluated.
 
 ---
 
-# 🚀 Why Iterative is More Efficient
+#  Why Iterative is More Efficient
 
 Both approaches have the same Big-O complexity:
 
@@ -608,7 +608,7 @@ Therefore, it is generally faster in practice.
 
 ---
 
-# 📊 Benchmark
+#  Benchmark
 
 The two implementations were executed using the same generated dataset.
 
@@ -665,7 +665,7 @@ The difference is caused primarily by recursive call overhead and additional sta
 
 ---
 
-# ⏱️ Complexity Analysis
+#  Complexity Analysis
 
 Let:
 
@@ -731,7 +731,7 @@ which simplifies to:
 
 ---
 
-# 💾 Space Complexity
+#  Space Complexity
 
 The scheduler stores:
 
@@ -756,7 +756,7 @@ So its practical memory usage is higher.
 
 ---
 
-# 🧩 Why Each Component Exists
+#  Why Each Component Exists
 
 | Component | Requirement |
 |-----------|-------------|
@@ -772,7 +772,7 @@ So its practical memory usage is higher.
 
 ---
 
-# 🏭 Enterprise Scalability
+#  Enterprise Scalability
 
 The main reason for using Binary Search + Dynamic Programming is scalability.
 
@@ -800,7 +800,7 @@ This makes the algorithm substantially more suitable for large scheduling datase
 
 ---
 
-# 🌍 Potential Applications
+#  Potential Applications
 
 Although the project is demonstrated using generic jobs, the same optimization engine can be applied to many domains.
 
@@ -831,7 +831,7 @@ Maximum Possible Revenue
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```text
 OptiSchedule/
@@ -861,7 +861,7 @@ OptiSchedule/
 
 ---
 
-# ▶️ Running the Project
+# ▶ Running the Project
 
 Compile the Java source files:
 
@@ -914,7 +914,7 @@ Output:
 
 ---
 
-# 🔐 Design Considerations
+#  Design Considerations
 
 ## Non-Overlapping Boundary
 
@@ -942,85 +942,6 @@ The benchmark uses a fixed random seed when generating test data.
 This ensures that the same dataset can be reproduced.
 
 That is important when comparing two implementations because both must receive identical workloads.
-
----
-
-# 📈 Performance Philosophy
-
-OptiSchedule follows a simple optimization principle:
-
-```text
-Reduce unnecessary work
-        ↓
-Use sorted data
-        ↓
-Search efficiently
-        ↓
-Reuse computed results
-        ↓
-Produce optimal decision
-```
-
-The project demonstrates how an algorithmic optimization can be transformed into a scalable business-oriented scheduling component.
-
----
-
-# 🔮 Future Architecture
-
-A production deployment could extend the current engine into:
-
-```text
-                 Enterprise Applications
-                         │
-                         ▼
-                      REST API
-                         │
-                         ▼
-                 Scheduling Service
-                         │
-              ┌──────────┴───────────┐
-              ▼                      ▼
-       OptiSchedule Engine      Database
-              │
-              ▼
-       Optimal Schedule
-              │
-              ▼
-       Revenue Dashboard
-```
-
-The optimization engine remains independent from the user interface, database, and API layers.
-
-This separation allows the algorithm to be reused by different applications.
-
----
-
-# 🏁 Conclusion
-
-OptiSchedule demonstrates how a classical optimization problem can be designed as a practical enterprise scheduling engine.
-
-The system combines:
-
-```text
-Sorting
-   +
-Binary Search
-   +
-Dynamic Programming
-   +
-Performance Benchmarking
-```
-
-to efficiently determine the most profitable non-overlapping schedule.
-
-The key engineering result is:
-
-```text
-O(n log n) Time
-O(n) Space
-```
-
-with the iterative implementation providing lower practical overhead than the recursive implementation.
 
 ---
 
