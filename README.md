@@ -861,7 +861,7 @@ OptiSchedule/
 
 ---
 
-# ▶ Running the Project
+#  Running the Project
 
 Compile the Java source files:
 
@@ -883,7 +883,7 @@ java -cp src Benchmark
 
 ---
 
-# 🧪 Example
+#  Example
 
 Input:
 
